@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 import { Search } from 'ui-kit/Inputs';
+import Image from 'ui-kit/Image';
 
 import s from './index.module.scss';
 
@@ -18,10 +19,10 @@ const Header: React.FC = () => {
       <ContentWrapper className={s.wrapper}>
         <div className={s.content}>
           <Link to="/" className={s.item}>
-            <img src="images/Logo.svg" alt="logo" />
+            <Image src="images/Logo.svg" alt="logo" />
           </Link>
           <Link to="/" className={classNames(s.item, s.boards)}>
-            <img src="images/trello-mark-blue.svg" alt="boards" />
+            <Image src="images/trello-mark-blue.svg" alt="boards" />
             <span>Boards</span>
           </Link>
           <div className={s.item}>
@@ -31,12 +32,12 @@ const Header: React.FC = () => {
 
         <div className={s.content}>
           <div className={s.userIcons}>
-            <img src="images/plus-circle-outline.svg" alt="plus" />
-            <img src="images/alert-circle-outline.svg" alt="alert" />
-            <img src="images/bell-outline.svg" alt="bell" />
+            <Image src="images/plus-circle-outline.svg" alt="plus" />
+            <Image src="images/alert-circle-outline.svg" alt="alert" />
+            <Image src="images/bell-outline.svg" alt="bell" />
           </div>
           <Link to="/">
-            <img src="images/user.svg" alt="user" />
+            <Image theme="circle" src="images/user.svg" alt="user" />
           </Link>
         </div>
       </ContentWrapper>
