@@ -1,28 +1,19 @@
-import React, { memo, FunctionComponent, useCallback } from 'react';
-import { Board } from 'store/boards/types';
+import React, { memo, FunctionComponent } from 'react';
+import { Board, Category } from 'store/categories/types';
 import BoardsRowTitle from 'components/BoardsRow/BoardsRowTitle';
 import Scrollbar from 'ui-kit/Scrollbar';
 
 import s from './styles.module.scss';
+import { BoardCard } from 'components/Cards';
 
-interface IProps {
-  list: Board[];
-  title: string;
-}
+const renderCard = (el: Board) => <BoardCard key={el.id} {...el} />;
 
-const BoardsRow: FunctionComponent<IProps> = ({ list, title }) => {
-  const renderCard = useCallback(
-    (el: Board, index) => {
-      return el;
-    },
-    [list],
-  );
-
+const BoardsRow: FunctionComponent<Category> = ({ boards, name }) => {
   return (
     <div className={s.boardsRow}>
-      <BoardsRowTitle>{title}</BoardsRowTitle>
+      <BoardsRowTitle>{name}</BoardsRowTitle>
       <Scrollbar>
-        <div className="qwe">{list.map(renderCard)}</div>
+        <div className={s.scrollArea}>{boards.map(renderCard)}</div>
       </Scrollbar>
     </div>
   );

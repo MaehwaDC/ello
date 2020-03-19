@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import boards from './boards/reducer';
+import categories from './categories/reducer';
 
 const rootReducer = combineReducers({
-  boards,
+  categories,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
