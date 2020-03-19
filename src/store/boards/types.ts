@@ -4,13 +4,13 @@ export type User = {
   imageUrl: string;
 };
 
-export type Task = {
+export type Board = {
   id: string | number;
   title: string;
   description: string;
   users: User[];
 };
 
-export interface ITaskStore {
-  list: Task[];
+export interface IBoardsStore {
+  list: Board[];
 }

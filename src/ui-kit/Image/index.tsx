@@ -1,16 +1,8 @@
-import React, {
-  DetailedHTMLProps,
-  FunctionComponent,
-  ImgHTMLAttributes,
-} from 'react';
+import React, { FunctionComponent, ComponentProps } from 'react';
 
 import s from './styles/index.module.scss';
 
-interface IProps
-  extends DetailedHTMLProps<
-    ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  > {
+interface IProps extends ComponentProps<'img'> {
   theme?: 'circle';
 }
 

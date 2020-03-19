@@ -1,14 +1,14 @@
 import { Action } from 'redux';
-import { ITaskStore } from './types';
+import { IBoardsStore } from './types';
 
-const initialState: ITaskStore = {
+const initialState: IBoardsStore = {
   list: [],
 };
 
-export default function tasks(
+export default function boards(
   state = initialState,
   action: Action,
-): ITaskStore {
+): IBoardsStore {
   switch (action.type) {
     default:
       return state;

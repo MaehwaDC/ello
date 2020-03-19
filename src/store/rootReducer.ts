@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import tasks from './tasks/reducer';
+import boards from './boards/reducer';
 
 const rootReducer = combineReducers({
-  tasks,
+  boards,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
