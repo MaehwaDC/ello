@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap');
+@import './reset';
+@import './variables';
+
+html {
+  font-family: $primary-font-family;
+}
